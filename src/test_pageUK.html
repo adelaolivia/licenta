@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test Engleza</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles/fix_parts.css">
+	<link rel="stylesheet" type="text/css" href="styles/tests_page.css">
+    <link rel="font" href="font/Quicksand Medium.ttf" type="font">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+ 	<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+	<script src="scripts/index.js"></script>
+</head>
+<body onload="userStuff();">
+	<div id="navbar" class="top_nav display_inline">
+		<ul id="navlist">
+			<li><a href="index.html"><i class="material-icons">home</i> Acasă</a></li>
+			<li><a href="tests_page.html"><i class="material-icons">description</i> Teste</a></li>
+			<li><a href="theory.html"><i class="material-icons">live_help</i> Teorie</a></li>
+			<li><a href="results.html"><i class="material-icons">folder_open</i> Rezultate</a></li>
+			<li><a href="settings_user.html" id="user_label"><i class="material-icons">perm_identity</i> Setări</a></li>
+			<li><a onclick="logoutUser();" href="#logout" id="left_a"><i class="material-icons">exit_to_app</i> Deconectare</a></li>
+			<li style=" color: white" id="learn_lang"><span>Înveți: <img src="images/uk_flag.jpg" alt="flag" height="auto" width="25px"></span></li>
+      
+		</ul>
+	</div>
+
+	
+    <div id="subm">HHHHH</div>
+    <div id="submenu1">
+      
+        <a href="tests_page.html"><div class='has-submenu'>Spaniolă</div></a>
+        <a href="test_pageFrench.html"><div class='has-submenu'>Franceză</div></a>
+        <a href="test_pageGerman.html"><div class='has-submenu'>Germană</div></a>
+        <a href="test_pageUK.html"><div class='has-submenu'>Engleză</div></a>
+  </div>
+  
+  <div id="subm1">HHHHH</div>
+    <div id="submenu2">
+      
+        <a href="theory.html"><div class='has-submenu'>Spaniolă</div></a>
+        <a href="theory_french.html"><div class='has-submenu'>Franceză</div></a>
+        <a href="theory_german.html"><div class='has-submenu'>Germană</div></a>
+        <a href="theory_uk.html"><div class='has-submenu'>Engleză</div></a>
+  </div>
+	
+    <div id="subm">HHHHH</div>
+    <div id="submenu1">
+      
+        <a href="tests_page.html"><div class='has-submenu'>Spaniolă</div></a>
+        <a href="test_pageFrench.html"><div class='has-submenu'>Franceză</div></a>
+        <a href="test_pageGerman.html"><div class='has-submenu'>Germană</div></a>
+        <a href="test_pageUK.html"><div class='has-submenu'>Engleză</div></a>
+  </div>
+  
+  <div id="subm1">HHHHH</div>
+    <div id="submenu2">
+      
+        <a href="theory.html"><div class='has-submenu'>Spaniolă</div></a>
+        <a href="theory_french.html"><div class='has-submenu'>Franceză</div></a>
+        <a href="theory_german.html"><div class='has-submenu'>Germană</div></a>
+        <a href="theory_uk.html"><div class='has-submenu'>Engleză</div></a>
+  </div>
+
+	<div id="mobile_menu_button" onclick="controlResponsiveBar(this);" status="hidden">
+		<p><i id="text_mobile_menu_button" class="material-icons">menu</i></p>
+	</div>
+
+	<div class="sidenav">
+			<a href="#null"></a>
+			<a href="#title">Teste cu alegeri multiple</a>
+			<a href="#title_2">Identifică traducerea</a>
+			<a href="#title_3">Completează propozițiile</a>
+			<a href="#title_4">Joc de memorie</a>
+			<a href="theory_uk.html">Teorie</a>
+		  </div>
+	
+    <div class="first_step">
+		<p id="title">     Întrebări cu alegeri multiple</p>
+
+			<a href="#pron">
+			<div class="outer_test_div">
+				<div class="test_div">
+					<img src="images/test_img1.jpg" alt="Persons test picture" onclick="goToTest(this);" test="pron_uk">
+					<p class="test_title">Pronume</p>
+					<p class="test_description"></p>
+				</div>
+			</div>
+			</a>
+
+			<a href="#greetings">
+			<div class="outer_test_div">
+				<div class="test_div">
+					<img src="images/test_img2.jpg" alt="Greetings test picture" onclick="goToTest(this);" test="greetings_uk">
+					<p class="test_title">Salutări</p>
+					<p class="test_description"></p>
+				</div>
+			</div>
+            </a>
+            <div class="outer_test_div"><a href="#time">
+
+                    <div class="test_div">
+                        <img src="images/time_img.jpg" alt="Greetings test picture" onclick="goToTest(this);" test="time_uk">
+                        <p class="test_title">Timp</p>
+                        <p class="test_description"></p>
+                    </div></a>
+            </div>
+            
+           <div class="outer_test_div"><a href="#food">
+                    <div class="test_div">
+                        <img src="images/food_img.png.jpg" alt="Greetings test picture" onclick="goToTest(this);" test="food_uk">
+                        <p class="test_title">Mâncare</p>
+                        <p class="test_description"></p>
+                    </div></a>
+                </div>
+            
+                <div class="outer_test_div"><a href="#verbs">
+                    <div class="test_div">
+                        <img src="images/verb_img.jpg" alt="Greetings test picture" onclick="goToTest(this);" test="verbs_uk">
+                        <p class="test_title">Verbe</p>
+                        <p class="test_description"></p>
+                    </div></a>
+				</div>
+				<p id="title_2">Găsește traducerea potrivită</p>
+
+				<div class="outer_test_div"><a href="#animals">
+                    <div class="test_div">
+                        <img src="images/animals_test.jpg" alt="Greetings test picture" onclick="goToTestDragDrop(this);" test_3="animals_uk" style="height: 186px">
+                        <p class="test_title">Animale</p>
+                        <p class="test_description"></p>
+                    </div></a>
+				</div>
+				<div class="outer_test_div"><a href="#colors">
+                    <div class="test_div">
+                        <img src="images/colors_test.jpg" alt="Greetings test picture" onclick="goToTestDragDrop(this);" test_3="colors_uk" style="height: 186px">
+                        <p class="test_title">Culori</p>
+                        <p class="test_description"></p>
+                    </div></a>
+				</div>
+				<p id="title_3">Completează propozițiile</p>
+
+				<a href="#numbers">
+						<div class="outer_test_div">
+                    <div class="test_div">
+                        <img src="images/numb_test.jpg" alt="Greetings test picture" onclick="goToTestComplete(this);" test_complete="Numbers_uk" style="height: 186px">
+                        <p class="test_title">Numere</p>
+                        <p class="test_description"></p>
+					</div>
+						</div>
+				</a>
+            
+
+					<a href="#transpot">
+						<div class="outer_test_div">
+							<div class="test_div">
+								<img src="images/transport_img.jpg" alt="Transport test picture" onclick="goToTestComplete(this);" test_complete="Transport_uk">
+								<p class="test_title">Transport</p>
+								<p class="test_description"></p>
+							</div>
+						</div>
+						</a>
+				<p id="title_4">Evaluează ce ai învățat cu un joc de memorie.</p>
+				<a href="cards_uk.html">
+					<div class="outer_test_div">
+						<div class="test_div">
+							<img src="images/game_img.jpg" alt="Transport test picture" >
+							<p class="test_title">Start</p>
+							<p class="test_description"></p>
+						</div>
+					</div>
+					</a>
+            
+    </div>
+    </div>
+
+    <footer>
+        <p><br>
+			<br>
+		<br</p>
+    </footer>
+    
+
+</body>
+</html>    
