@@ -1,0 +1,67 @@
+<html>
+  <head>
+      <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+    <script src="scripts/test_complete.js"></script>
+
+    
+    <title>Completeaza frazele</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="font" href="font/Quicksand Medium.ttf" type="font">
+    <link rel="stylesheet" href="styles/test_complete.css">
+    <link rel="stylesheet" href="styles/fix_parts.css" type="text/css">
+  </head>
+  <body onload="loadQuestions();">
+ 
+  
+<div class="container">
+  <h1 id="tilu_complet">Completează frazele:</h1>
+  <div class="questionPane" id="1">
+    <p id="question1"></p>
+    <input type="text" id="answer1" placeholder="răspunde aici"></input> 
+    <button onclick="Question1(), checkMyScore()" class="checkbtn">✔</button>
+  <p id="answerPane1"></p>
+  </div>
+  
+  <div class="questionPane" id="2">
+    <p id="question2"></p>
+    <input type="text" id="answer2" placeholder="răspunde aici"></input> 
+    <button onclick="Question2(), checkMyScore()" class="checkbtn">✔</button>
+  <p id="answerPane2"></p>
+  </div>
+  
+  <div class="questionPane" id="3">
+    <p id="question3"></p>
+    <input type="text" id="answer3" placeholder="răspunde aici"></input> 
+    <button onclick="Question3(), checkMyScore()" class="checkbtn">✔</button>
+  <p id="answerPane3"></p>
+  </div>
+
+  <div class="questionPane" id="4">
+      <p id="question4"></p>
+      <input type="text" id="answer4" placeholder="răspunde aici"></input> 
+      <button onclick="Question4(), checkMyScore()" class="checkbtn">✔</button>
+    <p id="answerPane4"></p>
+    </div>
+
+    <div class="questionPane" id="5">
+        <p id="question5"></p>
+        <input type="text" id="answer5" placeholder="răspunde aici"></input> 
+        <button onclick="Question5(), checkMyScore()" class="checkbtn">✔</button>
+      <p id="answerPane5"></p>
+      </div>
+      
+    <div class="questionPane" id="6">
+        <p id="question6"></p>
+        <input type="text" id="answer6" placeholder="răspunde aici"></input> 
+        <button onclick="Question6(), checkMyScore()" class="checkbtn">✔</button>
+      <p id="answerPane6"></p>
+      </div>
+  </div>
+  
+  
+  <div class="scorebox"><p class="scoring" id="text_score">Score: <div id="scoring" value="0"></div></p></div>
+  
+  <div id="nextLesson"><h1 id="result"></h1><br/><a href="tests_page.html">Întoarce-te la pagina de teste.</a></div>
+  
+</body>
+</html>
