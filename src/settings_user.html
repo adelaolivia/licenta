@@ -1,0 +1,96 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles/fix_parts.css">
+    <link rel="stylesheet" type="text/css" href="styles/user_set.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="font" href="font/Quicksand Medium.ttf" type="font">
+    
+    <title>Setari Utilizator</title>
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+    <script src="scripts/index.js"></script>
+</head>
+
+<body onload="userStuff(); userSettings();">
+    <div id="navbar" class="top_nav display_inline">
+        <ul id="navlist">
+            <li><a href="index.html"><i class="material-icons">home</i> Acasă</a></li>
+            <li><a href="tests_page.html"><i class="material-icons">description</i> Teste</a></li>
+            <li><a href="theory.html"><i class="material-icons">live_help</i> Teorie</a></li>
+            <li><a href="results.html"><i class="material-icons">folder_open</i> Rezultate</a></li>
+            <li><a href="settings_user.html" id="user_label"><i class="material-icons">perm_identity</i> Setări</a></li>
+            <li><a onclick="logoutUser();" href="#logout" id="left_a"><i class="material-icons">exit_to_app</i> Deconectare</a></li>
+        </ul>
+    </div>
+
+    
+    <div id="subm">HHHHH</div>
+    <div id="submenu1">
+      
+        <a href="tests_page.html"><div class='has-submenu'>Spaniolă</div></a>
+        <a href="test_pageFrench.html"><div class='has-submenu'>Franceză</div></a>
+        <a href="test_pageGerman.html"><div class='has-submenu'>Germană</div></a>
+        <a href="test_pageUK.html"><div class='has-submenu'>Engleză</div></a>
+  </div>
+  
+  <div id="subm1">HHHHH</div>
+    <div id="submenu2">
+      
+        <a href="theory.html"><div class='has-submenu'>Spaniolă</div></a>
+        <a href="theory_french.html"><div class='has-submenu'>Franceză</div></a>
+        <a href="theory_german.html"><div class='has-submenu'>Germană</div></a>
+        <a href="theory_uk.html"><div class='has-submenu'>Engleză</div></a>
+  </div>
+
+    <div id="mobile_menu_button" onclick="controlResponsiveBar(this);" status="hidden">
+        <p><i id="text_mobile_menu_button" class="material-icons">menu</i></p>
+    </div>
+
+    <div>
+        <p id=us_title>Contul Utilizatorului</p>
+    </div>
+
+    <div class=information>
+        <p class="big_text" id="us_name">Nume de utilizator: </p>
+        <input type="username" id="us_username" selected>
+        
+        <p class="big_text" id="us_email">Email</p>
+        <p id="email_label" class="small_text">Se încarcă infomațiile...</p>
+        
+        <p class="small_text" id="submit_changes" onclick="updateProfile();">Update</p>
+
+        <p class="big_text" id="change_password" onclick="showChangePassword();">Schimbă parola</p>
+        
+        <p class="big_text" id="delete_account" onclick="showDelete();">Dezactivează contul</p>
+    </div>
+
+    <div id="us_side_bar">
+        <p>Parola veche:</p>
+        <input type="password" id="old_password">
+        
+        <p>Parola nouă:</p>
+        <input type="password" id="new_password">
+
+        <p>Repetă parola nouă:</p>
+        <input type="password" id="new_password_again">
+        
+        <p id="submit_password" onclick="changePassword();">Schimbă parola</p>
+
+        <p id="password_message"></p>
+    </div>
+
+    <div id="delete_warning_bg" onclick="hideDelete();">
+        <div id="delete_warning">
+            <p>Ești sigur că vrei să îți ștergi contul? Toate rezultatele vor fi pierdute.</p>
+            <p id="delete_account_anyway" onclick="deleteAccount();">Șterge contul</p>
+        </div>
+    </div>
+
+    <footer>
+        <p><br>
+        <br>
+    <br></p>
+    </footer>
+
+</body>
+</html>
