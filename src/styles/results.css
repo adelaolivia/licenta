@@ -1,0 +1,154 @@
+html, body{
+	margin: 0;
+	height: 100%;
+	background-image: url('../images/results_bg.jpg');
+  	background-size: cover;
+  	background-attachment: fixed;
+}
+
+/* Stats */
+
+#counts{
+	margin: 1em 4em;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 1em;
+}
+
+.count_part{
+	margin: 0;
+	display: block;
+	width: 30%;
+	height: 200px;
+}
+
+.count_part>p{
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+	margin: 0;
+}
+
+.count_title{
+	font-size: 2em;
+}
+
+.count_number{
+	font-size: 6em;
+}
+
+/* Graphics */
+
+#graphics{
+	margin: 1em 4em;
+	padding: 1em;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.outer_column{
+	width: 100%;
+	height: 250px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.column{
+	width: 15%;
+	width: 3em;
+	height: 0px;
+	bottom: 0;
+	max-height: 200px;
+	border-radius: 6px;
+	background: #fff;
+}
+
+.column>p{
+	position: relative;
+	bottom: 60px;
+	left: 0;
+	text-align: center;
+	color: #fff;
+	width: max-content;
+}
+
+.title_div{
+	width: 60%;
+	margin: 0 auto;
+}
+
+.graphic_title{
+	border-bottom: 1px solid #fff;
+	color: #333;
+	bottom: 40px;
+	position: relative;
+	font-size: 1.3em;
+}
+
+/* Detailed view */
+
+#details{
+	padding: 2em;
+}
+
+.details_title{
+	color: #fff;
+	transition: .15s;
+	border-bottom: 1px solid #fff;
+}
+
+.details_title:hover{
+	color: #9889E0;
+	cursor: pointer;
+}
+
+#hidden_details_view{
+	display: none;
+	flex-direction: row;
+	flex-wrap: wrap;
+	overflow: hidden;
+	justify-content: space-around;
+	padding: .5em 2em;
+	max-height: 100%;
+}
+
+.test_details{
+	background-image: url('../images/white_opacity_bg.png');
+	padding: 0 1.5em;
+	margin: .5em 2em;
+}
+
+.test_title{
+	color: #fff;
+	text-align: center;
+	font-size: 1.2em;
+}
+
+.test_score{
+	color: #fff;
+	text-align: center;
+}
+
+@media all and (max-width: 700px){
+	#counts{
+		flex-direction: column;
+	}
+
+	.count_part{
+		margin: 0 auto;
+		display: auto;
+	}
+
+	#graphics{
+		flex-direction: column;
+	}
+
+	#hidden_details_view{
+		flex-direction: column;
+	}
+}
