@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Rezultate</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="styles/fix_parts.css" type="text/css">
+	<link rel="stylesheet" href="styles/results.css" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="font" href="font/Quicksand Medium.ttf" type="font">
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+ 	<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+	<script src="scripts/index.js"></script>
+</head>
+<body onload="userStuff(); loadStats(); loadGraphics(); loadDetails();">
+	<div id="navbar" class="top_nav display_inline">
+		<ul id="navlist">
+			<li><a href="index.html"><i class="material-icons">home</i> Acasă</a></li>
+			<li><a href="tests_page.html"><i class="material-icons">description</i> Teste</a></li>
+			<li><a href="theory.html"><i class="material-icons">live_help</i> Teorie</a></li>
+			<li><a href="results.html"><i class="material-icons">folder_open</i> Rezultate</a></li>
+			<li><a href="settings_user.html" id="user_label"><i class="material-icons">perm_identity</i> Setări</a></li>
+			<li><a onclick="logoutUser();" href="#logout" id="left_a"><i class="material-icons">exit_to_app</i> Deconectare</a></li>
+		</ul>
+	</div>
+
+	
+    <div id="subm">HHHHH</div>
+    <div id="submenu1">
+      
+        <a href="tests_page.html"><div class='has-submenu'>Spaniolă</div></a>
+        <a href="test_pageFrench.html"><div class='has-submenu'>Franceză</div></a>
+        <a href="test_pageGerman.html"><div class='has-submenu'>Germană</div></a>
+        <a href="test_pageUK.html"><div class='has-submenu'>Engleză</div></a>
+  </div>
+  
+  <div id="subm1">HHHHH</div>
+    <div id="submenu2">
+      
+        <a href="theory.html"><div class='has-submenu'>Spaniolă</div></a>
+        <a href="theory_french.html"><div class='has-submenu'>Franceză</div></a>
+        <a href="theory_german.html"><div class='has-submenu'>Germană</div></a>
+        <a href="theory_uk.html"><div class='has-submenu'>Engleză</div></a>
+  </div>
+
+	<div id="mobile_menu_button" onclick="controlResponsiveBar(this);" status="hidden">
+		<p><i id="text_mobile_menu_button" class="material-icons">menu</i></p>
+	</div>
+
+	<div id="counts">
+		<div class="count_part">
+			<p class="count_title">Teste Parcurse</p>
+			<p id="done_tests" class="count_number">0</p>
+		</div>
+
+		<div class="count_part">
+			<p class="count_title">Scor Mediu</p>
+			<p id="av_score" class="count_number">0%</p>
+		</div>
+
+		<div class="count_part">
+			<p class="count_title">Scor Perfect</p>
+			<p id="perfects" class="count_number">0</p>
+		</div>
+	</div>
+
+	<div id="graphics">
+		<div class="title_div">
+			<p class="graphic_title">Scorul împărțit în intervale:</p>
+			<div id="score_graphic" class="outer_column">
+				<div class="column" id="percent_20">
+					<p class="column_text">0 - 20%</p>
+				</div>
+				<div class="column" id="percent_40">
+					<p class="column_text">20 - 40%</p>
+				</div>
+				<div class="column" id="percent_60">
+					<p class="column_text">40 - 60%</p>
+				</div>
+				<div class="column" id="percent_80">
+					<p class="column_text">60 - 80%</p>
+				</div>
+				<div class="column" id="percent_100">
+					<p class="column_text">80 - 100%</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="details">
+		<p class="details_title" onclick="showDetailedView();">Vizualizează testele parcurse.</p>
+		<div id="hidden_details_view">
+		</div>
+	</div>
+</body>
+</html>
