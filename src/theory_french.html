@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Teorie Franceza</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles/fix_parts.css">
+	<link rel="stylesheet" type="text/css" href="styles/tests_page.css">
+    <link rel="font" href="font/Quicksand Medium.ttf" type="font">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+ 	<script src="scripts/index.js"></script>
+</head>
+<body onload="userStuff();">
+    <div id="navbar" class="top_nav display_inline">
+       <ul id="navlist">
+            <li><a href="index.html"><i class="material-icons">home</i> Acasă</a></li>
+            <li><a href="tests_page.html"><i class="material-icons">description</i> Teste</a></li>
+            <li><a href="theory.html"><i class="material-icons">live_help</i> Teorie</a></li>
+            <li><a href="results.html"><i class="material-icons">folder_open</i> Rezultate</a></li>
+            <li><a href="settings_user.html" id="user_label"><i class="material-icons">perm_identity</i> Setări</a></li>
+            <li><a onclick="logoutUser();" href="#logout" id="left_a"><i class="material-icons">exit_to_app</i> Deconectare</a></li>
+            <li style=" color: white" id="learn_lang"><span>Înveți: <img src="images/french_flag.png" alt="flag" height="auto" width="25px"></span></li>
+        </ul>
+    </div>
+
+    
+    <div id="subm">HHHHH</div>
+    <div id="submenu1">
+      
+        <a href="tests_page.html"><div class='has-submenu'>Spaniolă</div></a>
+        <a href="test_pageFrench.html"><div class='has-submenu'>Franceză</div></a>
+        <a href="test_pageGerman.html"><div class='has-submenu'>Germană</div></a>
+        <a href="test_pageUK.html"><div class='has-submenu'>Engleză</div></a>
+  </div>
+  
+  <div id="subm1">HHHHH</div>
+    <div id="submenu2">
+      
+        <a href="theory.html"><div class='has-submenu'>Spaniolă</div></a>
+        <a href="theory_french.html"><div class='has-submenu'>Franceză</div></a>
+        <a href="theory_german.html"><div class='has-submenu'>Germană</div></a>
+        <a href="theory_uk.html"><div class='has-submenu'>Engleză</div></a>
+  </div>
+  
+    <div id="mobile_menu_button" onclick="controlResponsiveBar(this);" status="hidden">
+        <p><i id="text_mobile_menu_button" class="material-icons">menu</i></p>
+    </div>
+
+    <div class="sidenav">
+        <a href="#null"></a>
+        <a href="#title">Teste cu alegeri multiple</a>
+        <a href="#title_2">Identifică traducerea</a>
+        <a href="#title_3">Completează propozițiile</a>
+      </div>
+
+    <div class="first_step">
+		<p id="title">     Întrebări cu alegeri multiple</p>
+
+        <div class="popup" onclick="myFunction()">
+			<div class="outer_test_div">
+				<div class="test_div">
+					<img src="images/test_img1.jpg" alt="Persons test picture">
+					<p class="test_title">Pronume</p>
+                    <p class="test_description"></p>
+                    
+				</div>
+            </div>
+            <span class="popuptext" id="myPopup"><a style="float: right;">X&nbsp&nbsp</a><h2>Pronume</h2>
+                <p><b><u>singular</u></b><br> <b><font color="#4965d2">Je</font></b> - Eu<br> <b><font color="#4965d2">Tu </font></b>- Tu (informal)<br>
+                    <b><font color="#4965d2">Vous</font></b> - Dumneavoastră (formal)<br> <b><font color="#4965d2">Il </font></b>- El<br> <b><font color="#4965d2">Elle </font></b>- Ea<br><br>
+                        <b><u>plural</u></b><br> <b><font color="#4965d2">Nous</font></b>	- Noi<br>  <b><font color="#4965d2">Vous </font></b>- Voi (informal)<br>
+                        <b><font color="#4965d2">Vous </font></b>- Voi (formal)<br>  <b><font color="#4965d2">Ils </font></b>- Ei<br> <b><font color="#4965d2">Ells</font></b> - Ele
+                        </p></span></div>
+
+            
+
+        <div class="popup" onclick="myFunction2()">
+			<div class="outer_test_div">
+				<div class="test_div">
+					<img src="images/test_img2.jpg" alt="Greetings test picture">
+					<p class="test_title">Salutări</p>
+					<p class="test_description"></p>
+				</div>
+			</div>
+            <span class="popuptext" id="myPopup2"><a style="float: right;">X&nbsp&nbsp</a><h2>Salutări</h2>
+                <p><b><font color="#4965d2"> Bonjour! </font></b> - Bună Dimineața<br>
+                    <b><font color="#4965d2">Au revoir! </font></b> - La Revedere<br>
+                    <b><font color="#4965d2">Bonne matinée! </font></b> - Bună ziua<br>
+                    <b><font color="#4965d2">Bonsoir</font></b> - Bună Seara<br>
+                    <b><font color="#4965d2">Salut!</font></b> - Bună!<br>
+                    <b><font color="#4965d2">Comment ça va?</font></b> - Cum ești? (informal)<br>
+                    <b><font color="#4965d2">Comment allez-vous?</font></b> - Cum ești? (formal)<br>
+                    <b><font color="#4965d2">Je suis désolé(e), mais je dois y aller </font></b> - Trebuie să plec<br>
+                    <b><font color="#4965d2">À plus tard! </font></b> - Pe curând</p>
+                    </span></div>
+
+                  
+            <div class="popup" onclick="myFunction3()">
+                    <div class="outer_test_div">
+                    <div class="test_div">
+                        <img src="images/time_img.jpg" alt="Time test picture">
+                        <p class="test_title">Timp</p>
+                        <p class="test_description"></p>
+                    </div>
+            </div>
+            <span class="popuptext" id="myPopup3"><a style="float: right;">X&nbsp&nbsp</a><p><h3>Timp</h3>
+                <b><font color="#4965d2">¿Qué hora es?</font></b> – Ce oră este?<br> 
+                    <h5>Zilele săpatămânii</h5>
+                    <b><font color="#4965d2">Lundi </font></b>- Luni<br>
+                    <b><font color="#4965d2">Mardi </font></b>- Marți<br>
+                    <b><font color="#4965d2">Mercredi</font></b> - Miercuri<br>
+                        <b><font color="#4965d2">Jeudi</font></b> - Joi<br>
+                        <b><font color="#4965d2">Vendredi</font></b> - Vineri<br>
+                        <b><font color="#4965d2">Samedi</font></b> - Sâmbătă<br>
+                        <b><font color="#4965d2">Dimanche</font></b> – Duminică<br>
+                        <h5>Alte cuvinte utile </h5>
+                        <b><font color="#4965d2">Du matin</font></b> - Dimineață<br>
+                        <b><font color="#4965d2">Midi</font></b> -Amiază<br>
+                        <b><font color="#4965d2">L'après-midi</font></b>-  După-amiază<br>
+                        <b><font color="#4965d2">Du soir </font></b>– Seară, Noapte<br>
+                        <b><font color="#4965d2">Hier</font></b> – Ieri<br>
+                        <b><font color="#4965d2">Aujourd'hui </font></b>- Astăzi<br>
+                        <b><font color="#4965d2">Demain </font></b> - Mâine<br>               
+            </p></span></div>
+            
+            <div class="popup" onclick="myFunction4()">
+           <div class="outer_test_div">
+                    <div class="test_div">
+                        <img src="images/food_img.png.jpg" alt="Food test picture">
+                        <p class="test_title">Mâncare</p>
+                        <p class="test_description"></p>
+                    </div>
+                </div>
+                <span class="popuptext" id="myPopup4"><a style="float: right;">X&nbsp&nbsp</a><p><h3>Mâncare & Băuturi</h3>
+                        <b><font color="#4965d2">Nourriture</font></b> – Mâncare<br> 
+                        <b><font color="#4965d2">Boisson </font></b>- Băutură<br>
+                        <b><font color="#4965d2">L'Eau</font></b> - Apă<br>
+                        <b><font color="#4965d2">Que voulez-vous manger? </font></b> - Ce vrei să mănânci?<br>
+                        <b><font color="#4965d2">L'addition, s'il vous plait</font></b> - Nota de plată<br>
+                        <b><font color="#4965d2"> Le Café, s'il vous plait </font></b>– O cafea, te rog<br>
+                        <b><font color="#4965d2"></font>Les Pâtisseries</b> – Prăjitură<br>
+                        <b><font color="#4965d2"> La Pomme</font></b> - Măr<br>
+                        <b><font color="#4965d2">Le Tomate </font></b>- Roșie<br>
+                        <b><font color="#4965d2">La Salade </font></b>- Salată<br>
+                        <b><font color="#4965d2">Les Légumes</font></b>- Legume<br>
+                </p></span></div>
+                <div class="popup" onclick="myFunction5()">
+                <div class="outer_test_div">
+                    <div class="test_div">
+                        <img src="images/verb_img.jpg" alt="Verbs test picture">
+                        <p class="test_title">Verbe</p>
+                        <p class="test_description"></p>
+                    </div>
+                </div>
+
+                <span class="popuptext" id="myPopup5"><a style="float: right;">X&nbsp&nbsp</a><p><h3>Verbe</h3>
+                    <b><font color="#4965d2">être</font></b> - a fi<br>
+                    <b><font color="#4965d2">    avoir</font></b> - a avea<br>
+                    <b><font color="#4965d2">     trouver</font></b> - a căuta<br>
+                    <b><font color="#4965d2">    dire</font></b> - a vorbi<br>
+                    <b><font color="#4965d2">    aller</font></b> - a merge<br>	
+                    <b><font color="#4965d2">    lire</font></b> - a citi<br>	
+                    <b><font color="#4965d2">     venir</font></b> - a veni<br>
+                    <b><font color="#4965d2">     voir</font></b> - a vedea<br>
+                    <b><font color="#4965d2">     aimer</font></b> - a plăcea<br>
+                    <b><font color="#4965d2">    écrire </font></b>- a scrie<br>	
+                    <b><font color="#4965d2">	utiliser</font></b> - a folosi<br>
+                    <b><font color="#4965d2">demander</font></b> - a întreba<br>
+
+                </p></span></div>
+
+                <p id="title_2">Găsește traducerea potrivită</p>
+
+                <div class="popup" onclick="myFunction6()">
+                <div class="outer_test_div">
+                    <div class="test_div">
+                        <img src="images/animals_test.jpg" alt="Greetings test picture" style="height: 186px">
+                        <p class="test_title">Animale</p>
+                        <p class="test_description"></p>
+                    </div>
+                </div>
+                <span class="popuptext" id="myPopup6"><a style="float: right;">X&nbsp&nbsp</a><p><h3>Animale</h3>
+                    <b><font color="#4965d2">Abeille</font></b> – Albină<br> 
+                        <b><font color="#4965d2">Lapin </font></b>- Iepure<br>
+                        <b><font color="#4965d2">Chat </font></b>- Pisică<br>
+                        <b><font color="#4965d2">Girafe</font></b> - Girafă<br>
+                            <b><font color="#4965d2">Perroquet</font></b> - Papagal<br>
+                            <b><font color="#4965d2">Requin</font></b> - Rechin<br>
+                            <b><font color="#4965d2">Chien</font></b> - Câine<br>
+                            <b><font color="#4965d2">Serpent</font></b> – Șarpe<br>
+                                        
+                </p></span>
+                </div>
+
+                <div class="popup" onclick="myFunction7()">
+                    <div class="outer_test_div">
+                        <div class="test_div">
+                            <img src="images/colors_test.jpg" alt="Greetings test picture" style="height: 186px">
+                            <p class="test_title">Culori</p>
+                            <p class="test_description"></p>
+                        </div>
+                    </div>
+
+                    <span class="popuptext" id="myPopup7"><a style="float: right;">X&nbsp&nbsp</a><p><h3>Culori</h3>
+                        <b><font color="#4965d2">L'Orange </font></b> – Portocaliu<br> 
+                            <b><font color="#4965d2">Le Jaune </font></b>- Galben<br>
+                            <b><font color="#4965d2">Le Bleu  </font></b>- Albastru<br>
+                            <b><font color="#4965d2">Le Rouge </font></b> - Roșu<br>
+                                <b><font color="#4965d2">Le Vert  </font></b> - Verge<br>
+                                <b><font color="#4965d2">Le Noir  </font></b> - Negru<br>
+                                <b><font color="#4965d2">L' Argent </font></b> - Argintiu<br>
+                                <b><font color="#4965d2">Le Rose </font></b> - Roz<br>
+                                <b><font color="#4965d2">Le Pourpre</font></b> – Mov<br>
+                                <b><font color="#4965d2">Le Blanc</font></b> – Alb<br>
+                                            
+                    </p></span>
+                
+                </div>
+
+                <p id="title_3">Completează propozițiile</p>
+
+                <div class="popup" onclick="myFunction8()">
+                    <div class="outer_test_div">
+                        <div class="test_div">
+                            <img src="images/numb_test.jpg" alt="Greetings test picture" style="height: 186px">
+                            <p class="test_title">Numere</p>
+                            <p class="test_description"></p>
+                        </div>
+                            </div>
+
+                            <span class="popuptext" id="myPopup8"><a style="float: right;">X&nbsp&nbsp</a><p><h3>Numere</h3>
+                                <h5>Numerele de la 1 la 10 </h5>
+                                <b><font color="#4965d2">1 - un   2 - deux   3 - trois   4 - quatre</font></b><br> 
+                                    <b><font color="#4965d2">5 - cinq    6 - six    7 - sept </font></b><br>
+                                    <b><font color="#4965d2">8 - huit    9 - neuf    10 - dix </font></b><br>
+                                    <h5>Alte informații utile</h5>
+                                    <b><font color="#4965d2">20 - vingt    21 - vingt et un     30 - trente </font></b><br>
+                                        <b><font color="#4965d2">40 - quarante    50- cinquante    60 - soixante</font></b><br>
+                                        <b><font color="#4965d2">70 - soixante-dix     80 - quatre-vingts   90 - quatre-vingts-dix</font></b><br>
+                                        <b><font color="#4965d2">100 – cent </font></b><br>
+                                                    
+                            </p></span>
+                        
+                </div>
+                
+                <div class="popup" onclick="myFunction9()">
+						<div class="outer_test_div">
+							<div class="test_div">
+								<img src="images/transport_img.jpg" alt="Transport test picture">
+								<p class="test_title">Transport</p>
+								<p class="test_description"></p>
+							</div>
+						</div>
+                        <span class="popuptext" id="myPopup9"><a style="float: right;">X&nbsp&nbsp</a><p><h3>Transport</h3>
+                            <b><font color="#4965d2">L'Avión </font></b> – Avion<br> 
+                                <b><font color="#4965d2">Un Train </font></b>- Tren<br>
+                                <b><font color="#4965d2">La Voiture	 </font></b>- Mașină<br>
+                                <b><font color="#4965d2">L'Autobus </font></b> - Bus<br>
+                                    <b><font color="#4965d2">Un Tramway </font></b> - Tramvai<br>
+                                    <b><font color="#4965d2">Le Vélo</font></b> - Bicicletă<br>
+                                    <b><font color="#4965d2">Le Bateau </font></b> - Barcă<br>
+                                    <b><font color="#4965d2">Ambulance </font></b> - Ambulanță<br>
+                                    <b><font color="#4965d2">Un Taxi</font></b> – Taxi<br>
+                                    <b><font color="#4965d2">Hélicoptère</font></b> – Elicopter<br>
+                                                
+                        </p></span>
+                </div>
+                <script>
+                        function myFunction() { 
+                            var popup = document.getElementById("myPopup");
+                            popup.classList.toggle("show");
+                        }
+                    
+                     function myFunction2() {
+                                var popup = document.getElementById("myPopup2");
+                                popup.classList.toggle("show");
+                     }
+                     function myFunction3() {
+                                var popup = document.getElementById("myPopup3");
+                                popup.classList.toggle("show");
+                     }
+                     function myFunction4() {
+                                var popup = document.getElementById("myPopup4");
+                                popup.classList.toggle("show");
+                     }
+                     function myFunction5() {
+                                var popup = document.getElementById("myPopup5");
+                                popup.classList.toggle("show");
+                     }
+
+                     function myFunction6() {
+                                var popup = document.getElementById("myPopup6");
+                                popup.classList.toggle("show");
+                     }
+
+                     function myFunction7() {
+                                var popup = document.getElementById("myPopup7");
+                                popup.classList.toggle("show");
+                     }
+
+                     function myFunction8() {
+                                var popup = document.getElementById("myPopup8");
+                                popup.classList.toggle("show");
+                     }
+
+                     function myFunction9() {
+                                var popup = document.getElementById("myPopup9");
+                                popup.classList.toggle("show");
+                     }
+                </script>
+            
+    </div>
+    </div>
+
+    <footer>
+        <p><br>
+            <br>
+        <br</p>
+    </footer>
+    
+
+</body>
+</html>    
