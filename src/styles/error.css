@@ -1,0 +1,58 @@
+body, html{
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	background-image: url('../images/results_bg.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	color: #fff;
+	font-family: 'Quicksand Medium', sans-serif;
+	text-align: center;
+	display: table;
+}
+
+#message{
+	margin: auto 0;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+h1{
+	font-size: 4em;
+	margin: 0;
+}
+
+p{
+	margin-bottom: 2em;
+}
+
+#message>a{
+	text-decoration-line: none;
+	background: #57D7BA;
+	color: #fff;
+	padding: .5em 1em;
+	border-radius: 20px;
+	transition: .25s;
+}
+
+#message>a:hover{
+	background: #7BA3DD;
+	color: #fff;
+}
+
+@media screen and (max-width: 800px)
+{
+  .err_page
+  {
+     flex-direction:column;  
+  }
+  .err_page_left img
+  {
+       width:250px;
+      height:auto;
+  }
+  .err_page h4
+  {
+    margin:0;
+  }
+}
