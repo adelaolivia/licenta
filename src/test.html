@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lang: Test</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/fix_parts.css">
+    <link rel="stylesheet" type="text/css" href="styles/test.css">
+    <link rel="font" href="font/Quicksand Medium.ttf" type="font">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+ 	<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+    <script src="scripts/test.js"></script>
+</head>
+<body onload="userStuff();">
+    <div id="navbar" class="top_nav display_inline">
+       <ul id="navlist">
+            <li><a href="index.html"><i class="material-icons">home</i> Acasă</a></li>    
+            <li><a href="tests_page.html"><i class="material-icons">description</i> Teste</a></li>
+            <li><a href="theory.html"><i class="material-icons">live_help</i> Teorie</a></li>
+            <li><a href="results.html"><i class="material-icons">folder_open</i> Rezultate</a></li>
+            <li><a href="settings_user.html" id="user_label"><i class="material-icons">perm_identity</i> Setări</a></li>
+            <li><a onclick="logoutUser();" href="#logout" id="left_a"><i class="material-icons">exit_to_app</i> Deconectare</a></li>
+        </ul>
+    </div>
+
+    <div id="mobile_menu_button" onclick="controlResponsiveBar(this);" status="hidden">
+        <p><i id="text_mobile_menu_button" class="material-icons">menu</i></p>
+    </div>
+
+    <div class="grid">
+        <div id="quiz">
+            <h1 id="test_title">Greetings</h1>
+            <hr style="margin-bottom: 20px">
+
+            <p id="question"></p>
+
+            <div class="buttons">
+                <button id="btn0"><span id="choice0"></span></button>
+                <button id="btn1"><span id="choice1"></span></button>
+                <button id="btn2"><span id="choice2"></span></button>
+                <button id="btn3"><span id="choice3"></span></button>
+            </div>
+
+            <hr style="margin-top: 50px">
+            <div>
+                <p id="correct"> </p>
+                <p id="progress">Question x of y</p>
+            </div>
+        </div>
+    </div>
+
+    
+ </body>
+
+</html>>
