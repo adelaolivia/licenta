@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" id="login_html">
+<head>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
+	<link rel="stylesheet" href="styles/login.css" type="text/css">
+	<title>Bine ai venit!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+	<script src="scripts/index.js"></script>
+</head>
+<body id="login_body" onload="enterListener();">
+	<div>
+		<div></div><br>
+		<br><br>
+		<p class="login_title">Vrei să înveți o nouă limbă?</p>
+		<p class="login_description"></p>
+	</div>
+
+	<div id="side_div">
+		<p id="login_title" class="login_side_text">Înregistreză-te în cont</p>
+		<p class="login_side_text">Username</p>
+		<input id="usr" type="text" class="login_text_input">
+		<p class="login_side_text">Password</p>
+		<input id="pwd" type="password" class="login_text_input">
+		<br><br><br>
+		<p onclick="loginUser();" id="login_btn" class="button_login">Înregistrare</p>
+		<p onclick="registerUser();" id="register_btn" class="button_register">Cont nou</p>
+		<br><br>		
+		<p id="error_message"></p>
+	</div>
+</body>
+</html>
