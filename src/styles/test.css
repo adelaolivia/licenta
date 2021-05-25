@@ -1,0 +1,150 @@
+/*test*/
+  body {
+    background-color: #eeeeee;
+}
+
+.grid {
+    width: 600px;
+    height: 470px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 10px 50px 50px 50px;
+    border-radius: 50px;
+    border: 2px solid #cbcbcb;
+    box-shadow: 10px 15px 5px #cbcbcb;
+}
+
+.grid h1 {
+    font-family: "Quicksand Medium", sans-serif;
+    background-color: #4965d2;
+    font-size: 60px;
+    text-align: center;
+    color: #ffffff;
+    padding: 2px 0px;
+    border-radius: 50px;
+}
+
+#score {
+    color: #4965d2;
+    text-align: center;
+    font-size: 30px;
+}
+
+.grid #question {
+    font-family: "Quicksand Medium", sans-serif;
+    font-size: 30px;
+    color: #4965d2;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+a{
+    text-decoration: none;
+}
+#back{
+    background-color: #4965d2;
+    width: 250px;
+    font-size: 20px;
+    color: #fff;
+    border: 1px solid #1D3C6A;
+    border-radius: 50px;
+    text-decoration: none;
+    padding: 10px 10px;
+    display: block;
+    margin: auto;
+}
+
+#back:hover{
+    cursor: pointer;
+    background-color: #a5b2c0;
+}
+
+#btn0, #btn1, #btn2, #btn3 {
+    background-color: #4965d2;
+    width: 250px;
+    font-size: 20px;
+    color: #fff;
+    border: 1px solid #1D3C6A;
+    border-radius: 50px;
+    margin: 10px 40px 10px 0px;
+    padding: 10px 10px;
+}
+
+#btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover {
+    cursor: pointer;
+    background-color: #a5b2c0;
+}
+
+#btn0:focus, #btn1:focus, #btn2:focus, #btn3:focus {
+    outline: 0;
+    
+}
+
+#correct {
+  align-content: center;
+  font-size: 16px;
+}
+#progress {
+    color: #2b2b2b;
+    font-size: 18px;
+}
+
+#loading_screen{
+  background-image: url('../images/results_bg.jpg');
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.loading_title{
+  margin: 5em 0 0;
+  text-align: center;
+  font-size: 3.5em;
+  font-weight: bold;
+  color: #fff;
+}
+
+.loading_subtitle{
+  text-align: center;
+  color: #fff;
+}
+
+
+@media only screen and (max-width : 700px){
+    .grid h1 {
+        font-size: 30px;
+        text-align: center;
+        color: #ffffff;
+        padding: 2px 0px;
+        border-radius: 50px;
+    }
+    #back{
+        background-color: #4965d2;
+        width: 100%;
+        font-size: 20px;  
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #btn0, #btn1, #btn2, #btn3 {
+        background-color: #4965d2;
+        width: 150px;
+        font-size: 20px;
+        display: block;
+        margin: auto;
+    }
+    .grid {
+        display: inline-block;
+        position: relative;
+        width: 65%;
+        height: 100%;
+         display: block;
+        margin: auto;
+        background-size: contain;    
+    }
+
+}
