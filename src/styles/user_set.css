@@ -1,0 +1,164 @@
+#us_title{
+  font-size: 1.5em;
+  margin: 2em 0 1em 2em;
+}
+
+.information{
+  padding-left: 90px;
+  margin-bottom: 1em;
+}
+
+#delete_account{
+  color: #A71014;
+  transition: .25s;
+  width: max-content;
+}
+
+#delete_account:hover{
+  color: #E17376;
+  cursor: pointer;
+}
+
+#change_password{
+  color: #160C72;
+  width: max-content;
+  transition: .25s;
+}
+
+#change_password:hover{
+  color: #988EF0;
+  cursor: pointer;
+}
+
+.small_text{
+  font-weight: initial;
+  font-size: 1em;
+}
+
+.big_text{
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.information>input{
+  background: transparent;
+  border: 3px solid #4965d2;
+  border-radius: 20px;
+  font-family: "Quicksand Medium", sans-serif;
+  padding: .25em;
+}
+
+#us_side_bar{
+  padding-top: 0;
+  margin: 0 .25em;
+  position: absolute;
+  left: 25em;  
+  top: -30em;
+  color: #4965d2;
+  text-align: center;
+}
+
+#us_side_bar>input{
+  background: transparent;
+  border: 3px solid #4965d2;
+  border-radius: 20px;
+  font-family: "Quicksand Medium", sans-serif;
+  padding: .25em;
+}
+
+#submit_password{
+  margin-top: 1em;
+  padding: .5em 1em;
+  font-family: 'Quicksand Medium', sans-serif;
+  color: #f1f1f1;
+  background: #4965d2;
+  border-radius: 25px;
+  display: block;
+  font-size: 1.05em;
+}
+
+#submit_password:hover{
+  color: #fff;
+  background: #9C96F1;
+  cursor: pointer;
+}
+
+#submit_changes{
+  width: max-content;
+  margin-top: 1em;
+  padding: .5em 1em;
+  color: #f1f1f1;
+  background: #4965d2;
+  border-radius: 25px;
+  display: block;
+  font-size: 1.05em;
+}
+
+#submit_changes:hover{
+  color: #fff;
+  background: #9C96F1;
+  cursor: pointer;
+}
+
+#delete_warning_bg{
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/black_opacity_bg.png');
+  z-index: 10;
+}
+
+#delete_warning{
+  width: 600px;
+  max-width: 600px;
+  display: block;
+  height: 300px;
+  background: #f1f1f1;
+  border-radius: 10px;
+  text-align: center;
+  margin: 12em auto;
+  padding: 1em;
+}
+
+#delete_warning>p{
+  color: #A71014;
+  font-weight: bold;
+  font-size: 1.35em;
+}
+
+#delete_account_anyway{
+  color: #f1f1f1 !important;
+  background: #A71014;
+  padding: .35em;
+  transition: .25s;
+  border-radius: 20px;
+}
+
+#delete_account_anyway:hover{
+  background: #F20006;
+  cursor: pointer;
+}
+
+#password_message{
+  color: #57CA31;
+}
+
+footer{
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #C0C0C0;
+  margin: 1.25em 0 0;
+  padding: 1em 0;
+}
+
+footer>p{
+  text-align: center;
+  color: #fff;
+  margin: 0;
+}
